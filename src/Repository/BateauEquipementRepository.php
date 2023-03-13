@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\Participer;
+use App\Entity\BateauEquipement;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Participer>
+ * @extends ServiceEntityRepository<BateauEquipement>
  *
- * @method Participer|null find($id, $lockMode = null, $lockVersion = null)
- * @method Participer|null findOneBy(array $criteria, array $orderBy = null)
- * @method Participer[]    findAll()
- * @method Participer[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method BateauEquipement|null find($id, $lockMode = null, $lockVersion = null)
+ * @method BateauEquipement|null findOneBy(array $criteria, array $orderBy = null)
+ * @method BateauEquipement[]    findAll()
+ * @method BateauEquipement[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ParticiperRepository extends ServiceEntityRepository
+class BateauEquipementRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Participer::class);
+        parent::__construct($registry, BateauEquipement::class);
     }
 
-    public function save(Participer $entity, bool $flush = false): void
+    public function save(BateauEquipement $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class ParticiperRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Participer $entity, bool $flush = false): void
+    public function remove(BateauEquipement $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -40,7 +40,7 @@ class ParticiperRepository extends ServiceEntityRepository
     }
 
 //    /**
-//     * @return Participer[] Returns an array of Participer objects
+//     * @return BateauEquipement[] Returns an array of BateauEquipement objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -54,7 +54,7 @@ class ParticiperRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Participer
+//    public function findOneBySomeField($value): ?BateauEquipement
 //    {
 //        return $this->createQueryBuilder('p')
 //            ->andWhere('p.exampleField = :val')

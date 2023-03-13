@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\ProposerRepository;
+use App\Repository\BateauEquipementRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ProposerRepository::class)]
-class Proposer
+#[ORM\Entity(repositoryClass: BateauEquipementRepository::class)]
+class BateauEquipement
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

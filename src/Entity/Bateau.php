@@ -30,10 +30,10 @@ class Bateau
     #[ORM\OneToMany(mappedBy: 'bateau', targetEntity: Traversee::class)]
     private Collection $traversees;
 
-    #[ORM\OneToMany(mappedBy: 'bateau', targetEntity: Proposer::class)]
+    #[ORM\OneToMany(mappedBy: 'bateau', targetEntity: BateauEquipement::class)]
     private Collection $equipements;
 
-    #[ORM\OneToMany(mappedBy: 'bateau', targetEntity: Contenir::class)]
+    #[ORM\OneToMany(mappedBy: 'bateau', targetEntity: BeateauCategorie::class)]
     private Collection $categories;
 
     public function __construct()

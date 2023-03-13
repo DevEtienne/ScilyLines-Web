@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\ContenirRepository;
+use App\Repository\BeateauCategorieRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ContenirRepository::class)]
-class Contenir
+#[ORM\Entity(repositoryClass: BeateauCategorieRepository::class)]
+class BeateauCategorie
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -39,14 +39,14 @@ class Contenir
         return $this;
     }
 
-    public function getBateau(): ?Bateau
+    public function getBeateau(): ?Beateau
     {
-        return $this->bateau;
+        return $this->beateau;
     }
 
-    public function setBateau(?Bateau $bateau): self
+    public function setBeateau(?Beateau $beateau): self
     {
-        $this->bateau = $bateau;
+        $this->beateau = $beateau;
 
         return $this;
     }

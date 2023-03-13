@@ -18,7 +18,7 @@ class Categorie
     #[ORM\Column(length: 255)]
     private ?string $libelle = null;
 
-    #[ORM\OneToMany(mappedBy: 'categorie', targetEntity: Contenir::class)]
+    #[ORM\OneToMany(mappedBy: 'categorie', targetEntity: BeateauCategorie::class)]
     private Collection $bateaux;
 
     #[ORM\OneToMany(mappedBy: 'categorie', targetEntity: Type::class)]

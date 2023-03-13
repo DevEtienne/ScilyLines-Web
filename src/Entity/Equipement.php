@@ -18,7 +18,7 @@ class Equipement
     #[ORM\Column(length: 255)]
     private ?string $libelle = null;
 
-    #[ORM\OneToMany(mappedBy: 'equipement', targetEntity: Proposer::class)]
+    #[ORM\OneToMany(mappedBy: 'equipement', targetEntity: BateauEquipement::class)]
     private Collection $bateaux;
 
     public function __construct()

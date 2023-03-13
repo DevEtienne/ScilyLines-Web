@@ -21,7 +21,7 @@ class Reservation
     #[ORM\ManyToOne(inversedBy: 'reservations')]
     private ?Traversee $traversee = null;
 
-    #[ORM\OneToMany(mappedBy: 'reservation', targetEntity: Participer::class)]
+    #[ORM\OneToMany(mappedBy: 'reservation', targetEntity: ReservationType::class)]
     private Collection $types;
 
     public function __construct()

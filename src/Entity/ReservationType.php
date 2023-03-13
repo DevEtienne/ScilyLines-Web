@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\ParticiperRepository;
+use App\Repository\ReservationTypeRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ParticiperRepository::class)]
-class Participer
+#[ORM\Entity(repositoryClass: ReservationTypeRepository::class)]
+class ReservationType
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

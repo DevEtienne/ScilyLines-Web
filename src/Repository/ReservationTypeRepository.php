@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\Proposer;
+use App\Entity\ReservationType;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Proposer>
+ * @extends ServiceEntityRepository<ReservationType>
  *
- * @method Proposer|null find($id, $lockMode = null, $lockVersion = null)
- * @method Proposer|null findOneBy(array $criteria, array $orderBy = null)
- * @method Proposer[]    findAll()
- * @method Proposer[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method ReservationType|null find($id, $lockMode = null, $lockVersion = null)
+ * @method ReservationType|null findOneBy(array $criteria, array $orderBy = null)
+ * @method ReservationType[]    findAll()
+ * @method ReservationType[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ProposerRepository extends ServiceEntityRepository
+class ReservationTypeRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Proposer::class);
+        parent::__construct($registry, ReservationType::class);
     }
 
-    public function save(Proposer $entity, bool $flush = false): void
+    public function save(ReservationType $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class ProposerRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Proposer $entity, bool $flush = false): void
+    public function remove(ReservationType $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -40,7 +40,7 @@ class ProposerRepository extends ServiceEntityRepository
     }
 
 //    /**
-//     * @return Proposer[] Returns an array of Proposer objects
+//     * @return ReservationType[] Returns an array of ReservationType objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -54,7 +54,7 @@ class ProposerRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Proposer
+//    public function findOneBySomeField($value): ?ReservationType
 //    {
 //        return $this->createQueryBuilder('p')
 //            ->andWhere('p.exampleField = :val')

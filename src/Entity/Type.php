@@ -21,7 +21,7 @@ class Type
     #[ORM\ManyToOne(inversedBy: 'types')]
     private ?Categorie $categorie = null;
 
-    #[ORM\OneToMany(mappedBy: 'type', targetEntity: Participer::class)]
+    #[ORM\OneToMany(mappedBy: 'type', targetEntity: ReservationType::class)]
     private Collection $reservations;
 
     #[ORM\OneToMany(mappedBy: 'type', targetEntity: Tarifer::class)]
