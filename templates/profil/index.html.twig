@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+	<link rel="stylesheet" href="{{asset('css/profil.css')}}" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">	
+{% endblock %}
+
+{% block body %}
+
+<body>
+	<script type="text/javascript">
+		function notifModifier(champs)
+		{
+			alert(champs + " a été modifié");
+		}
+	</script>
+	<table class="table">
+		<thead>
+			<tr>
+				<center><h4>Profil</h4></center>
+			</tr>
+		</thead>
+		<tbody>
+			<form method="post" action="{{path('doctrine_update_prenom')}}">
+				<tr>
+					<td>
+						<div class="d-flex align-items-center">
+							<div class="user-info__basic">
+								<h5 class="mb-0">Prénom</h5>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="d-flex align-items-baseline">
+							<h4 class="mr-1"><input type="text" name="prenom" value="{{user.prenom | capitalize}}"></h4><small class="text-success"></small>
+						</div>
+					</td>
+					<td>
+						<input type="submit" id="Le prénom" onClick="notifModifier(this.id)" class="btn btn-success btn-sm" style="color:white"/>
+					</td>
+				</tr>
+			</form>
+			<form method="post" action="{{path('doctrine_update_nom')}}">
+
+			<tr>
+				<td>
+					<div class="d-flex align-items-center">
+						<div class="user-info__basic">
+							<h5 class="mb-0">Nom</h5>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="d-flex align-items-baseline">
+						<h4 class="mr-1"><input type="text" name="nom" value="{{user.nom | capitalize}}"></h4><small class="text-success"></small>
+					</div>
+				</td>
+				<td>
+					<input type="submit" id="Le nom" onClick="notifModifier(this.id)" class="btn btn-success btn-sm" style="color:white"/>
+				</td>
+			</tr>
+			</form>
+			<form method="post" action="{{path('doctrine_update_email')}}">
+			<tr>
+				<td>
+					<div class="d-flex align-items-center">
+						<div class="user-info__basic">
+							<h5 class="mb-0">Adresse email</h5>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="d-flex align-items-baseline">
+						<h4 class="mr-1"><input type="text" name="email" value="{{user.email}}"></h4><small class="text-success"></small>
+					</div>
+				</td>
+				<td>
+					<input type="submit" id="L'email" onClick="notifModifier(this.id)" class="btn btn-success btn-sm" style="color:white"/>
+				</td>
+			</tr>
+			</form>
+			<form method="post" action="{{path('doctrine_update_tel')}}">
+			<tr>
+				<td>
+					<div class="d-flex align-items-center">
+						<div class="user-info__basic">
+							<h5 class="mb-0">Téléphone</h5>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="d-flex align-items-baseline">
+						<h4 class="mr-1"><input type="text" name="tel" value="{{user.tel}}"></h4><small class="text-success"></small>
+					</div>
+				</td>
+				<td>
+					<input type="submit" id="Le téléphone" onClick="notifModifier(this.id)" class="btn btn-success btn-sm" style="color:white"/>
+				</td>
+			</tr>
+			</form>
+		</tbody>
+	</table>
+	</div>
+</section>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+{% endblock %}

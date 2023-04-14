@@ -1,0 +1,31 @@
+body{
+    background-image: url("../../img/contact-bg.jpg");
+    color: white;
+    background-size: cover;
+}
+
+.contact{
+    display: flex;
+}
+
+.informations > h2{
+    padding: 3rem 0 1rem;
+}
+
+.informations{
+    margin: 5% 10%;
+    width: 30%;
+    padding: 0.5rem 2rem;
+}
+
+.form-contact{
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 2rem;
+    padding-top: 6rem;
+    margin: 3rem 12% 0 0;
+}
+
+.form-contact > .line1{
+    display: flex;
+}

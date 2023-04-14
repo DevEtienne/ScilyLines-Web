@@ -1,0 +1,22 @@
+.container{
+    height: 65%;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-size: 100%;
+     
+ 
+ }
+ 
+ .bloc1,.bloc2,.bloc3{
+     height : 35%;
+     width : 40%;
+     border-radius: 10px;
+ }
+
+ .container > .bloc1,.bloc2,.bloc3{
+    background-color: rgba(0, 0, 0, 0.5); 
+    margin-right: 10%;
+    align-items: center;
+}

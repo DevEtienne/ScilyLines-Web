@@ -1,0 +1,65 @@
+.container1{
+   height: 34rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    background-image:url("../img/paysage.png");
+}
+
+.bloc1, .bloc2{
+    height : 60%;
+    width : 35%;
+    border-radius: 10px;
+}
+
+.container1 > .bloc1{
+    background-color: rgba(0, 0, 0, 0.5); 
+    margin-right: 10%;
+    align-items: center;
+    display: grid;
+}
+
+.container1 > .bloc1 > .flex1{
+    display: flex; 
+    justify-content: center;
+
+    }
+
+.container1 > .bloc1 > .flex2{
+    display: flex; 
+    justify-content: center;
+
+    }
+
+.container1 > .bloc1 > .flex3{
+    display: flex; 
+    justify-content: center;
+
+    }
+
+.container1 > .bloc1 > .flex4{
+    display: flex; 
+    justify-content: center;
+    
+    }
+
+
+.container1 > .bloc1 > div{
+    margin-top: 15px;
+}
+.container1 > .bloc1 > .flex1 > div:not(:last-child){
+    margin-right: 10px;
+}
+
+.container1 > .bloc1 > .flex2 > div:not(:last-child){
+    margin-right: 10px;
+}
+
+.container1 > .bloc1 > .flex3 > div:not(:last-child){
+    margin-right: 10px;
+}
+
+
+

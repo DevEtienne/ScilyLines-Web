@@ -1,0 +1,33 @@
+@import 'style.css';
+
+.navbar{
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    align-items: center;
+    background-color: aliceblue;
+    justify-content: space-between;
+}
+
+.navbar > div, .navbar > .container2 > div{
+    display: flex;
+    align-items: center;
+}
+
+.circle{
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.25rem;
+}
+
+.navbar > .containerNav > *:not(:first-child){
+    margin-left: 0.75rem;
+}
+
+.navbar > .container2 > *:not(:last-child){
+    margin-right: 1rem;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+}

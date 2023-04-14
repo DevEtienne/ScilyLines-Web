@@ -16,14 +16,17 @@ class Liaison
     #[ORM\Column]
     private ?int $id = null;
 
+    #[ORM\ManyToOne(inversedBy: 'liaisons')]
+    private ?Port $portDepart = null;
+
+    #[ORM\ManyToOne(inversedBy: 'liaisons')]
+    private ?Port $portArrivee = null;
+
     #[ORM\Column(type: Types::TIME_MUTABLE)]
     private ?\DateTimeInterface $duree = null;
 
     #[ORM\OneToMany(mappedBy: 'liaison', targetEntity: Traversee::class)]
     private Collection $traversees;
-
-    #[ORM\ManyToOne(inversedBy: 'liaisons')]
-    private ?Port $port = null;
 
     #[ORM\ManyToOne(inversedBy: 'liaisons')]
     private ?Secteur $secteur = null;
@@ -84,18 +87,6 @@ class Liaison
         return $this;
     }
 
-    public function getPort(): ?Port
-    {
-        return $this->port;
-    }
-
-    public function setPort(?Port $port): self
-    {
-        $this->port = $port;
-
-        return $this;
-    }
-
     public function getSecteur(): ?Secteur
     {
         return $this->secteur;
@@ -134,6 +125,30 @@ class Liaison
                 $tarifer->setLiaison(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPortDepart(): ?Port
+    {
+        return $this->portDepart;
+    }
+
+    public function setPortDepart(?Port $portDepart): self
+    {
+        $this->portDepart = $portDepart;
+
+        return $this;
+    }
+
+    public function getPortArrivee(): ?Port
+    {
+        return $this->portArrivee;
+    }
+
+    public function setPortArrivee(?Port $portArrivee): self
+    {
+        $this->portArrivee = $portArrivee;
 
         return $this;
     }

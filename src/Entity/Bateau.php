@@ -33,7 +33,7 @@ class Bateau
     #[ORM\OneToMany(mappedBy: 'bateau', targetEntity: BateauEquipement::class)]
     private Collection $equipements;
 
-    #[ORM\OneToMany(mappedBy: 'bateau', targetEntity: BeateauCategorie::class)]
+    #[ORM\OneToMany(mappedBy: 'bateau', targetEntity: BateauCategorie::class)]
     private Collection $categories;
 
     public function __construct()
@@ -157,14 +157,14 @@ class Bateau
     }
 
     /**
-     * @return Collection<int, Contenir>
+     * @return Collection<int, BateauCategorie>
      */
     public function getCategories(): Collection
     {
         return $this->categories;
     }
 
-    public function addCategory(Contenir $category): self
+    public function addCategory(BateauCategorie $category): self
     {
         if (!$this->categories->contains($category)) {
             $this->categories->add($category);
@@ -174,7 +174,7 @@ class Bateau
         return $this;
     }
 
-    public function removeCategory(Contenir $category): self
+    public function removeCategory(BateauCategorie $category): self
     {
         if ($this->categories->removeElement($category)) {
             // set the owning side to null (unless already changed)
@@ -185,4 +185,5 @@ class Bateau
 
         return $this;
     }
+
 }

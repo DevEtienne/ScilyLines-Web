@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{asset('css/general/form2.css')}}" />
+<link rel="stylesheet" href="{{asset('css/unique/contact.css')}}" />
+{% endblock %}
+
+{% block body %}
+<div class="contact">
+    <div class="informations">
+        <h1 style="font-size: 2.5rem;">Contactez-nous</h1>
+        <h2><i class="fa-solid fa-phone" style="padding-right: 0.5rem;"></i>Pour nous appeler</h2>
+        <p>+33 06 40 41 42 43 44</p>
+        <h2><i class="fa-solid fa-location-dot" style="padding-right: 0.75rem;"></i>Localisation</h2>
+        <p>28 Rue de Strasbourg</p>
+        <h2><i class="fa-solid fa-clock" style="padding-right: 0.5rem;"></i>Nos horaires</h2>
+        <p>Ouvert du Lundi au Vendredi de 10h à 17h30</p>
+    </div>
+    <div class="form-contact">
+        <div class="line1">
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Prénom" name="name" id='name' required />
+                <label for="name" class="form__label">Prénom</label>
+            </div>
+            <div class="form__group field";>
+                <input type="input" class="form__field" style="margin-left: 5rem" placeholder="Nom" name="name" id='name' required />
+                <label for="name" style="margin-left: 5rem" class="form__label">Nom</label>
+            </div>
+        </div>
+        <div class="form__group field">
+            <input type="input" class="form__field" placeholder="Email" name="name" id='name' required />
+            <label for="name" class="form__label">Email</label>
+        </div>
+        <div class="form__group field">
+            <input type="input" class="form__field"  placeholder="Laisser un message" name="name" id='name' required />
+            <label for="name" class="form__label">Message</label>
+        </div>
+        <div class="form__group field">
+        <center><button class="button-submit">Envoyer</button></center>       
+     </div>
+
+
+    </div>
+</div>
+{% endblock %}

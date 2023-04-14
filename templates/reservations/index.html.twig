@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{asset('css/unique/reservation.css')}}" />
+{% endblock %}
+
+{% block body %}
+
+<center><h3>Mes Reservations</h3></center> 
+<div class="container">
+
+
+    <div class="bloc1" >
+        <div class="flex1">
+            <div>
+                italie
+            </div>
+            <div>
+                Espagne
+            </div>
+        </div>
+        
+        <div class="flex2">
+            durée du trajet :
+            7h50
+        </div>
+
+       <div class="flex3">
+            <button class="button-arounder">En Cours</button>
+        
+       </div>
+    </div>
+    
+
+    <div class="bloc2" >
+        <div class="flex1">
+            <div>
+                italie
+            </div>
+            <div>
+                Espagne
+            </div>
+        </div>
+        
+        <div class="flex2">
+            durée du trajet :
+            7h50
+        </div>
+
+       <div class="flex3">
+            <button class="button-arounder">Terminer</button>
+        
+       </div>
+    </div>
+</div>
+{% endblock %}

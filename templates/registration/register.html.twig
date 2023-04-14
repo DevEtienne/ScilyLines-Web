@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{asset('css/general/form.css')}}" />
+{% endblock %}
+
+{% block body %}
+    <h1>Register</h1>
+    <center>
+    <div>
+        <h2>Créer un compte</h2>
+        <h2>Inscrivez-vous dès maintenant, c'est facile et rapide</h2>
+    </div>
+        {{ form_start(registrationForm, {
+            attr: {class: 'form'}
+        })}}
+        <div>
+            <label for="registration_form_prenom">Prénom</label>
+            {{ form_row(registrationForm.prenom) }}
+        </div>
+        <div>
+            <label for="registration_form_nom">Nom</label>
+            {{ form_row(registrationForm.nom) }}
+        </div>
+        <div>
+            <label for="registration_form_tel">Téléphone</label>
+            {{ form_row(registrationForm.tel) }}
+        </div>
+        <div>
+            <label for="registration_form_email">Email</label>
+            {{ form_row(registrationForm.email) }}
+        </div>
+        <div>
+            <label for="registration_form_plainPassword">Mot de Passe</label>
+            {{ form_row(registrationForm.plainPassword) }}
+        </div>
+
+            <button type='submit' class="button-submit">Créer</button>
+        {{ form_end(registrationForm) }}
+    </center>
+{% endblock %}
