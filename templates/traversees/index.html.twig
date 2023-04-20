@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{asset('css/unique/reservation.css')}}" />
+{% endblock %}
+
+{% block body %}
+<center><h3>Les Traversées disponibles</h3></center> 
+<div class="container">
+
+    {% for liaison in liaisons %}
+
+        <div class="blockReservation">
+            <div class="flex1">
+                <div>
+                    {{liaison.portDepart}}
+                </div>
+                <div>
+                    {{liaison.portArrivee}}
+                </div>
+            </div>
+            
+            <div class="flex2">
+                {{liaison.duree|date('H:i:s')}}
+            </div>
+
+            <div class="flex3">
+                <a href="{{ path('reserver_traversee', {id: liaison.id }) }}"> <button class="button-arounder">Réserver</button> </a>
+            </div>
+        </div>
+
+    {% endfor %}
+
+</div>
+{% endblock %}

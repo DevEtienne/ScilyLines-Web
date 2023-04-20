@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block body %}
-
+{{reservations[0]}}
 <center><h3>Mes Reservations</h3></center> 
 <div class="container">
 
 
-    <div class="bloc1" >
+    <div class="blockReservation" >
         <div class="flex1">
             <div>
                 italie
@@ -32,7 +32,7 @@
     </div>
     
 
-    <div class="bloc2" >
+    <div class="blockReservation" >
         <div class="flex1">
             <div>
                 italie
@@ -52,5 +52,32 @@
         
        </div>
     </div>
+
+    {% for reservation in reservations %}
+
+        <div class="blockReservation">
+            <div class="flex1">
+                <div>
+                    italie
+                </div>
+                <div>
+                    Espagne
+                </div>
+            </div>
+            
+            <div class="flex2">
+                durée du trajet :
+                7h50
+            </div>
+
+            <div class="flex3">
+                <button class="button-arounder">Terminer</button>
+            </div>
+        </div>
+
+    {% endfor %}
+
+
+
 </div>
 {% endblock %}
